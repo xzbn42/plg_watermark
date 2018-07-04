@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3" group="jshoppingproducts" method="upgrade">
+
+    <name>PLG_JSHOPPINGPRODUCTS_WATERMARK</name>
+    <author>BoxApp.net</author>
+    <creationDate>10.04.2017</creationDate>
+    <copyright>Copyright © BoxApp.net</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <authorEmail>info@boxapp.net</authorEmail>
+    <authorUrl>https://boxapp.net</authorUrl>
+    <version>3.1.0</version>
+    <description>PLG_JSHOPPINGPRODUCTS_WATERMARK_XML_DESCRIPTION</description>
+    <updateservers>
+        <server type="extension" priority="1" name="BoxApp.net Updates - watermark plugin for JoomShopping">https://boxapp.net/index.php?option=com_jshopping&amp;controller=extupdate&amp;task=updates&amp;type=plugin&amp;file=PLG_JSHOPPINGPRODUCTS_watermark_joomla3.xml</server>
+    </updateservers>
+
+    <files>
+        <folder>language</folder>
+        <filename>index.html</filename>
+        <filename plugin="watermark">watermark.php</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="patternPath"
+                        type="media"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_PATTERN_PATH_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_PATTERN_PATH_DESC"
+                />
+                <field
+                        name="addWatermarkWhenSelectImageFromExisting"
+                        type="radio"
+                        default="0"
+                        class="btn-group btn-group-yesno"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_ADD_WATERMARK_WHEN_SELECT_IMAGE_FROM_EXISTING_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_ADD_WATERMARK_WHEN_SELECT_IMAGE_FROM_EXISTING_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="addToFullImage"
+                        type="radio"
+                        default="1"
+                        class="btn-group btn-group-yesno"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_ADD_TO_FULL_IMAGE_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_ADD_TO_FULL_IMAGE_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="addToBaseImage"
+                        type="radio"
+                        default="1"
+                        class="btn-group btn-group-yesno"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_ADD_TO_BASE_IMAGE_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_ADD_TO_BASE_IMAGE_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="addToThumbImage"
+                        type="radio"
+                        default="0"
+                        class="btn-group btn-group-yesno"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_ADD_TO_THUMB_IMAGE_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_ADD_TO_THUMB_IMAGE_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="horizontalAlignment"
+                        type="list"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_HORIZONTAL_ALIGNMENT_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_HORIZONTAL_ALIGNMENT_DESC"
+                >
+                    <option value="right">PLG_JSHOPPINGPRODUCTS_WATERMARK_HORIZONTAL_ALIGNMENT_RIGHT</option>
+                    <option value="left">PLG_JSHOPPINGPRODUCTS_WATERMARK_HORIZONTAL_ALIGNMENT_LEFT</option>
+                    <option value="middle">PLG_JSHOPPINGPRODUCTS_WATERMARK_HORIZONTAL_ALIGNMENT_MIDDLE</option>
+                </field>
+                <field
+                        name="verticalAlignment"
+                        type="list"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_VERTICAL_ALIGNMENT_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_VERTICAL_ALIGNMENT_DESC"
+                >
+                    <option value="bottom">PLG_JSHOPPINGPRODUCTS_WATERMARK_VERTICAL_ALIGNMENT_BOTTOM</option>
+                    <option value="top">PLG_JSHOPPINGPRODUCTS_WATERMARK_VERTICAL_ALIGNMENT_TOP</option>
+                    <option value="middle">PLG_JSHOPPINGPRODUCTS_WATERMARK_VERTICAL_ALIGNMENT_MIDDLE</option>
+                </field>
+                <field
+                        name="destX"
+                        type="text"
+                        filter="integer"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_DESTINATION_X_COORDINATE_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_DESTINATION_X_COORDINATE_DESC"
+                />
+                <field
+                        name="destY"
+                        type="text"
+                        filter="integer"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_DESTINATION_Y_COORDINATE_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_DESTINATION_Y_COORDINATE_DESC"
+                />
+                <field
+                        name="coordinateUnits"
+                        type="list"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_COORDINATE_UNITS_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_COORDINATE_UNITS_DESC"
+                >
+                    <option value="pixel">PLG_JSHOPPINGPRODUCTS_WATERMARK_COORDINATE_UNITS_PIXEL</option>
+                    <option value="percent">PLG_JSHOPPINGPRODUCTS_WATERMARK_COORDINATE_UNITS_PERCENT</option>
+                </field>
+                <field
+                        name="scaleWatermarkImage"
+                        type="radio"
+                        default="0"
+                        class="btn-group btn-group-yesno"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_SCALE_WATERMARK_IMAGE_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_SCALE_WATERMARK_IMAGE_IMAGE_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="baseImageForScaleWatermark"
+                        type="list"
+                        label="PLG_JSHOPPINGPRODUCTS_WATERMARK_BASE_IMAGE_FOR_SCALE_WATERMARK_LABEL"
+                        description="PLG_JSHOPPINGPRODUCTS_WATERMARK_BASE_IMAGE_FOR_SCALE_WATERMARK_DESC"
+                >
+                    <option value="full">PLG_JSHOPPINGPRODUCTS_WATERMARK_BASE_IMAGE_FOR_SCALE_WATERMARK_FULL</option>
+                    <option value="base">PLG_JSHOPPINGPRODUCTS_WATERMARK_BASE_IMAGE_FOR_SCALE_WATERMARK_BASE</option>
+                    <option value="thumb">PLG_JSHOPPINGPRODUCTS_WATERMARK_BASE_IMAGE_FOR_SCALE_WATERMARK_THUMB</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
